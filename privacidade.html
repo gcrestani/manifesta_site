@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidade — Intualia</title>
+<meta name="description" content="Política de Privacidade do Intualia: como coletamos, usamos, armazenamos e compartilhamos dados no aplicativo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0D0B1F;
+    --surface:#1A1635;
+    --violet:#7C3AED;
+    --violet-light:#A78BFA;
+    --violet-dark:#6D28D9;
+    --gold:#F59E0B;
+    --green:#10B981;
+    --pink:#EC4899;
+    --text:#FFFFFF;
+    --text-subtle:#94A3B8;
+    --glass-border:rgba(255,255,255,0.1);
+    --max:840px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'DM Sans', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{color:inherit;}
+  .wrap{max-width:var(--max); margin:0 auto; padding-left:24px; padding-right:24px;}
+  .eyebrow{
+    font-size:0.8rem;
+    font-weight:700;
+    letter-spacing:0.06em;
+    color:var(--violet-light);
+    text-transform:uppercase;
+  }
+  .glass{
+    background:linear-gradient(135deg, rgba(26,22,53,0.82), rgba(26,22,53,0.68));
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+    border:1px solid var(--glass-border);
+    border-radius:24px;
+  }
+  .aura{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(90px);
+    pointer-events:none;
+    z-index:0;
+  }
+  nav.topbar{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(13,11,31,0.72);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--glass-border);
+  }
+  .nav-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:16px 0;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:700;
+    font-size:1.1rem;
+    letter-spacing:-0.01em;
+    text-decoration:none;
+  }
+  .brand .dot{
+    width:13px; height:13px;
+    border-radius:50%;
+    background:radial-gradient(circle at 30% 30%, var(--violet-light), var(--violet) 60%, var(--violet-dark));
+    box-shadow:0 0 14px rgba(124,58,237,0.65);
+  }
+  .nav-cta{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--glass-border);
+    border:1px solid var(--glass-border);
+    color:var(--text);
+    font-weight:700;
+    font-size:0.82rem;
+    padding:10px 20px;
+    border-radius:100px;
+    text-decoration:none;
+    transition:background 0.15s ease, border-color 0.15s ease;
+  }
+  .nav-cta:hover{background:rgba(124,58,237,0.22); border-color:rgba(167,139,250,0.4);}
+
+  main{
+    position:relative;
+    z-index:2;
+    padding:56px 0 90px;
+  }
+  .doc-header{margin-bottom:36px;}
+  .doc-header h1{
+    font-size:clamp(1.8rem, 4vw, 2.4rem);
+    line-height:1.15;
+    font-weight:800;
+    letter-spacing:-0.02em;
+    margin:14px 0 10px;
+  }
+  .doc-header .updated{
+    font-size:0.85rem;
+    color:var(--text-subtle);
+  }
+  .doc-header .lede{
+    font-size:1rem;
+    line-height:1.65;
+    color:var(--text-subtle);
+    margin:18px 0 0;
+  }
+
+  .doc-body{padding:36px 34px;}
+  .doc-body section + section{margin-top:32px; padding-top:32px; border-top:1px solid var(--glass-border);}
+  .doc-body h2{
+    font-size:1.1rem;
+    font-weight:700;
+    letter-spacing:-0.005em;
+    margin:0 0 14px;
+  }
+  .doc-body p{
+    font-size:0.94rem;
+    line-height:1.7;
+    color:var(--text-subtle);
+    margin:0 0 12px;
+  }
+  .doc-body p:last-child{margin-bottom:0;}
+  .doc-body ul{
+    margin:0;
+    padding-left:20px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .doc-body li{
+    font-size:0.94rem;
+    line-height:1.7;
+    color:var(--text-subtle);
+  }
+  .doc-body strong{color:var(--text);}
+
+  .back-link{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-size:0.85rem;
+    font-weight:600;
+    color:var(--violet-light);
+    text-decoration:none;
+    margin-top:36px;
+  }
+  .back-link:hover{color:var(--text);}
+
+  footer{
+    position:relative;
+    z-index:2;
+    border-top:1px solid var(--glass-border);
+    padding:26px 0 34px;
+  }
+  .footer-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:16px;
+    flex-wrap:wrap;
+    font-size:0.8rem;
+    color:var(--text-subtle);
+  }
+  .footer-inner nav{display:flex; gap:18px; flex-wrap:wrap;}
+  .footer-inner a{
+    color:var(--text-subtle);
+    text-decoration:none;
+    font-weight:600;
+  }
+  .footer-inner a:hover{color:var(--violet-light);}
+
+  @media (max-width: 560px){
+    .doc-body{padding:28px 22px;}
+  }
+</style>
+</head>
+<body>
+
+  <div class="aura" style="width:420px; height:420px; background:var(--violet); opacity:0.22; top:-160px; left:-120px;"></div>
+  <div class="aura" style="width:340px; height:340px; background:var(--gold); opacity:0.1; top:40px; right:-140px;"></div>
+
+  <nav class="topbar">
+    <div class="wrap nav-inner">
+      <a class="brand" href="/"><span class="dot"></span>Intualia</a>
+      <a class="nav-cta" href="https://play.google.com/store/apps/details?id=com.manifesta.app" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="15" height="15"><path d="M3 3.5v17c0 .4.2.7.5.9l9.4-9.4L3.5 2.6c-.3.2-.5.5-.5.9z" fill="currentColor"/><path d="M14.6 12.9l2.9-2.9-9.9-5.7 7 8.6z" fill="currentColor" opacity="0.75"/><path d="M14.6 11.1l-7 8.6 9.9-5.7-2.9-2.9z" fill="currentColor" opacity="0.75"/><path d="M18.8 9.2l-2.6-1.5-3 3 3 3 2.6-1.5c.9-.5.9-1.9 0-2.4z" fill="currentColor" opacity="0.55"/></svg>
+        <span>Baixar o app</span>
+      </a>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <main>
+      <div class="doc-header">
+        <span class="eyebrow">Legal</span>
+        <h1>Política de Privacidade</h1>
+        <span class="updated">Última atualização: 28 de agosto de 2026</span>
+        <p class="lede">Esta Política explica como o Intualia coleta, utiliza, armazena e compartilha dados quando você usa o aplicativo. Ela se aplica às versões de teste e públicas do Intualia.</p>
+      </div>
+
+      <article class="doc-body glass">
+        <section>
+          <h2>1. Quem é responsável pelos dados</h2>
+          <p>O Intualia, identificado também como o aplicativo Intualia na loja, é responsável pelas decisões sobre o tratamento dos dados descritos nesta Política.</p>
+          <p>Para assuntos de privacidade, exercício de direitos ou dúvidas, escreva para <strong>privacidade@intualia.app</strong>.</p>
+        </section>
+
+        <section>
+          <h2>2. Dados que podemos tratar</h2>
+          <p>Tratamos somente os dados necessários para disponibilizar, proteger e melhorar o aplicativo. Dependendo das funcionalidades utilizadas, isso pode incluir:</p>
+          <ul>
+            <li><strong>Conta e perfil:</strong> identificador de usuário, nome, e-mail, telefone opcional, foto de perfil e informações de autenticação.</li>
+            <li><strong>Conteúdo inserido por você:</strong> respostas do questionário, metas, notas, check-ins emocionais, práticas, reflexões e históricos. Esses conteúdos podem revelar aspectos pessoais ou emocionais.</li>
+            <li><strong>Assinaturas:</strong> identificador da conta, produto adquirido, situação do Premium e histórico necessário para compra ou restauração. O Intualia não recebe os dados completos do seu cartão.</li>
+            <li><strong>Dados técnicos e de uso:</strong> versão do app, tipo de dispositivo, eventos de navegação, diagnósticos de falha, endereço IP, identificadores de instalação e tokens de integridade e segurança.</li>
+            <li><strong>Dados locais:</strong> preferências e conteúdos temporários armazenados no dispositivo para funcionamento e migração da conta.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>3. Permissões do dispositivo</h2>
+          <ul>
+            <li><strong>Fotos:</strong> acessadas somente quando você escolhe uma imagem para o perfil.</li>
+            <li><strong>Notificações:</strong> usadas para lembretes solicitados pelo aplicativo e podem ser desativadas nas configurações do dispositivo.</li>
+            <li>A versão beta não solicita acesso a câmera, microfone, contatos ou localização precisa.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>4. Como usamos os dados</h2>
+          <ul>
+            <li>Criar e proteger sua conta e manter sua sessão autenticada.</li>
+            <li>Sincronizar seus dados entre dispositivos e entregar as funções que você solicitar.</li>
+            <li>Reconhecer seu plano Free, Premium ou benefício Beta Founder.</li>
+            <li>Processar, restaurar e prevenir fraude em assinaturas.</li>
+            <li>Enviar lembretes locais e comunicações essenciais do serviço.</li>
+            <li>Medir uso de forma agregada, corrigir falhas e proteger o aplicativo contra abuso.</li>
+            <li>Cumprir obrigações legais e responder a solicitações legítimas.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>5. Bases legais</h2>
+          <p>Quando aplicável, tratamos dados para executar o serviço solicitado e os Termos de Uso, cumprir obrigações legais, proteger interesses legítimos relacionados à segurança e melhoria do app e, nos casos exigidos, com seu consentimento. Você pode revogar consentimentos sem afetar tratamentos anteriores legítimos.</p>
+        </section>
+
+        <section>
+          <h2>6. Prestadores e compartilhamento</h2>
+          <p>Não vendemos seus dados pessoais e não utilizamos identificadores de publicidade. Dados podem ser processados pelos seguintes prestadores, apenas para as finalidades do aplicativo:</p>
+          <ul>
+            <li><strong>Google Firebase:</strong> autenticação, banco de dados, armazenamento, integridade do app, métricas e diagnósticos de falha.</li>
+            <li><strong>Google Play:</strong> distribuição, pagamentos, assinaturas e segurança.</li>
+            <li><strong>RevenueCat:</strong> gerenciamento do status de assinaturas e benefícios.</li>
+            <li>Autoridades ou terceiros, quando a lei exigir ou para proteger direitos, segurança e prevenir fraude.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>7. Armazenamento e transferências internacionais</h2>
+          <p>Os prestadores podem processar dados no Brasil e em outros países onde mantêm infraestrutura. Adotamos contratos, configurações de segurança e controles de acesso compatíveis com a natureza dos dados e com a legislação aplicável.</p>
+        </section>
+
+        <section>
+          <h2>8. Retenção e exclusão</h2>
+          <p>Mantemos dados enquanto sua conta estiver ativa e pelo período necessário para prestar o serviço. Após uma solicitação válida de exclusão, removemos a conta e os dados associados dos sistemas ativos, ressalvados prazos técnicos de backup e retenções exigidas por lei, segurança, prevenção a fraude ou defesa de direitos.</p>
+          <p>Você pode iniciar a solicitação em Meu Perfil &gt; Privacidade e Legal &gt; Excluir conta e dados, ou pela <a href="/excluir-conta.html" style="color:var(--violet-light); font-weight:600;">página pública de exclusão</a>.</p>
+        </section>
+
+        <section>
+          <h2>9. Seus direitos</h2>
+          <p>Nos termos da legislação aplicável, inclusive a LGPD, você pode solicitar confirmação e acesso, correção, informação sobre compartilhamentos, portabilidade quando cabível, anonimização, bloqueio ou eliminação, revisão de decisões automatizadas e revogação de consentimento. Podemos solicitar confirmação de identidade antes de atender ao pedido.</p>
+        </section>
+
+        <section>
+          <h2>10. Segurança</h2>
+          <p>Utilizamos autenticação, regras de acesso por conta, comunicação criptografada, proteção de integridade e controles de upload. Nenhum sistema é infalível; mantenha suas credenciais seguras e comunique qualquer suspeita de acesso indevido.</p>
+        </section>
+
+        <section>
+          <h2>11. Crianças e adolescentes</h2>
+          <p>O Intualia não é direcionado a crianças menores de 13 anos. Menores devem usar o serviço somente com ciência e autorização do responsável legal, conforme a legislação aplicável.</p>
+        </section>
+
+        <section>
+          <h2>12. Alterações e contato</h2>
+          <p>Podemos atualizar esta Política para refletir mudanças no aplicativo ou na legislação. A data da versão vigente será informada no topo. Mudanças relevantes poderão ser comunicadas no app.</p>
+          <p>Contato de privacidade: <strong>privacidade@intualia.app</strong>.</p>
+        </section>
+      </article>
+
+      <a class="back-link" href="/">&larr; Voltar para a página inicial</a>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© 2026 Intualia</span>
+      <nav>
+        <a href="/">Início</a>
+        <a href="/privacidade.html">Privacidade</a>
+        <a href="/excluir-conta.html">Excluir conta</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
