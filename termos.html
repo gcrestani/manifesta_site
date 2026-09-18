@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Termos de Uso — Intualia</title>
+<meta name="description" content="Termos de Uso do aplicativo Intualia: conta, assinaturas, conteúdo, uso aceitável e responsabilidade.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0D0B1F;
+    --surface:#1A1635;
+    --violet:#7C3AED;
+    --violet-light:#A78BFA;
+    --violet-dark:#6D28D9;
+    --gold:#F59E0B;
+    --green:#10B981;
+    --pink:#EC4899;
+    --text:#FFFFFF;
+    --text-subtle:#94A3B8;
+    --glass-border:rgba(255,255,255,0.1);
+    --max:840px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'DM Sans', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{color:inherit;}
+  .wrap{max-width:var(--max); margin:0 auto; padding-left:24px; padding-right:24px;}
+  .eyebrow{
+    font-size:0.8rem;
+    font-weight:700;
+    letter-spacing:0.06em;
+    color:var(--violet-light);
+    text-transform:uppercase;
+  }
+  .glass{
+    background:linear-gradient(135deg, rgba(26,22,53,0.82), rgba(26,22,53,0.68));
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+    border:1px solid var(--glass-border);
+    border-radius:24px;
+  }
+  .aura{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(90px);
+    pointer-events:none;
+    z-index:0;
+  }
+  nav.topbar{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(13,11,31,0.72);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--glass-border);
+  }
+  .nav-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:16px 0;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:700;
+    font-size:1.1rem;
+    letter-spacing:-0.01em;
+    text-decoration:none;
+  }
+  .brand .dot{
+    width:13px; height:13px;
+    border-radius:50%;
+    background:radial-gradient(circle at 30% 30%, var(--violet-light), var(--violet) 60%, var(--violet-dark));
+    box-shadow:0 0 14px rgba(124,58,237,0.65);
+  }
+  .nav-cta{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--glass-border);
+    border:1px solid var(--glass-border);
+    color:var(--text);
+    font-weight:700;
+    font-size:0.82rem;
+    padding:10px 20px;
+    border-radius:100px;
+    text-decoration:none;
+    transition:background 0.15s ease, border-color 0.15s ease;
+  }
+  .nav-cta:hover{background:rgba(124,58,237,0.22); border-color:rgba(167,139,250,0.4);}
+
+  main{
+    position:relative;
+    z-index:2;
+    padding:56px 0 90px;
+  }
+  .doc-header{margin-bottom:36px;}
+  .doc-header h1{
+    font-size:clamp(1.8rem, 4vw, 2.4rem);
+    line-height:1.15;
+    font-weight:800;
+    letter-spacing:-0.02em;
+    margin:14px 0 10px;
+  }
+  .doc-header .updated{
+    font-size:0.85rem;
+    color:var(--text-subtle);
+  }
+  .doc-header .lede{
+    font-size:1rem;
+    line-height:1.65;
+    color:var(--text-subtle);
+    margin:18px 0 0;
+  }
+
+  .doc-body{padding:36px 34px;}
+  .doc-body section + section{margin-top:32px; padding-top:32px; border-top:1px solid var(--glass-border);}
+  .doc-body h2{
+    font-size:1.1rem;
+    font-weight:700;
+    letter-spacing:-0.005em;
+    margin:0 0 14px;
+  }
+  .doc-body p{
+    font-size:0.94rem;
+    line-height:1.7;
+    color:var(--text-subtle);
+    margin:0 0 12px;
+  }
+  .doc-body p:last-child{margin-bottom:0;}
+  .doc-body ul{
+    margin:0;
+    padding-left:20px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .doc-body li{
+    font-size:0.94rem;
+    line-height:1.7;
+    color:var(--text-subtle);
+  }
+  .doc-body strong{color:var(--text);}
+
+  .back-link{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-size:0.85rem;
+    font-weight:600;
+    color:var(--violet-light);
+    text-decoration:none;
+    margin-top:36px;
+  }
+  .back-link:hover{color:var(--text);}
+
+  footer{
+    position:relative;
+    z-index:2;
+    border-top:1px solid var(--glass-border);
+    padding:26px 0 34px;
+  }
+  .footer-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:16px;
+    flex-wrap:wrap;
+    font-size:0.8rem;
+    color:var(--text-subtle);
+  }
+  .footer-inner nav{display:flex; gap:18px; flex-wrap:wrap;}
+  .footer-inner a{
+    color:var(--text-subtle);
+    text-decoration:none;
+    font-weight:600;
+  }
+  .footer-inner a:hover{color:var(--violet-light);}
+
+  @media (max-width: 560px){
+    .doc-body{padding:28px 22px;}
+  }
+</style>
+</head>
+<body>
+
+  <div class="aura" style="width:420px; height:420px; background:var(--gold); opacity:0.18; top:-160px; left:-120px;"></div>
+  <div class="aura" style="width:340px; height:340px; background:var(--violet); opacity:0.14; top:40px; right:-140px;"></div>
+
+  <nav class="topbar">
+    <div class="wrap nav-inner">
+      <a class="brand" href="/"><span class="dot"></span>Intualia</a>
+      <a class="nav-cta" href="https://play.google.com/store/apps/details?id=com.manifesta.app" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="15" height="15"><path d="M3 3.5v17c0 .4.2.7.5.9l9.4-9.4L3.5 2.6c-.3.2-.5.5-.5.9z" fill="currentColor"/><path d="M14.6 12.9l2.9-2.9-9.9-5.7 7 8.6z" fill="currentColor" opacity="0.75"/><path d="M14.6 11.1l-7 8.6 9.9-5.7-2.9-2.9z" fill="currentColor" opacity="0.75"/><path d="M18.8 9.2l-2.6-1.5-3 3 3 3 2.6-1.5c.9-.5.9-1.9 0-2.4z" fill="currentColor" opacity="0.55"/></svg>
+        <span>Baixar o app</span>
+      </a>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <main>
+      <div class="doc-header">
+        <span class="eyebrow">Legal</span>
+        <h1>Termos de Uso</h1>
+        <span class="updated">Última atualização: 28 de agosto de 2026</span>
+        <p class="lede">Estes Termos regulam o uso do aplicativo Intualia. Ao criar uma conta ou utilizar o serviço, você declara que leu e concorda com estes Termos e com a <a href="/privacidade.html" style="color:var(--violet-light); font-weight:600;">Política de Privacidade</a>.</p>
+      </div>
+
+      <article class="doc-body glass">
+        <section>
+          <h2>1. O serviço</h2>
+          <p>O Intualia oferece ferramentas de autoconhecimento, organização de metas, reflexão, regulação emocional e práticas de bem-estar. Recursos podem variar entre os planos Free, Premium e programas promocionais.</p>
+        </section>
+
+        <section>
+          <h2>2. Aviso de saúde e bem-estar</h2>
+          <p>O conteúdo do Intualia tem finalidade educacional e de bem-estar. Ele não constitui diagnóstico, tratamento médico ou psicológico, nem substitui profissionais qualificados. Em situação de emergência ou risco à sua segurança, procure imediatamente os serviços de emergência e profissionais da sua região.</p>
+        </section>
+
+        <section>
+          <h2>3. Conta e segurança</h2>
+          <ul>
+            <li>Forneça informações verdadeiras e mantenha seus dados atualizados.</li>
+            <li>Sua conta é pessoal e não pode ser compartilhada ou transferida.</li>
+            <li>Você é responsável por proteger sua senha e avisar sobre acessos não autorizados.</li>
+            <li>Podemos limitar ou suspender contas usadas para fraude, abuso, ataque ao serviço ou violação destes Termos.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>4. Seu conteúdo</h2>
+          <p>Você mantém os direitos sobre os conteúdos que registra. Você nos autoriza, de forma limitada, a armazenar, processar e transmitir esses conteúdos apenas para operar e proteger o serviço. Não publique conteúdo ilegal, que viole direitos de terceiros ou que tente comprometer o aplicativo.</p>
+        </section>
+
+        <section>
+          <h2>5. Premium e assinaturas</h2>
+          <ul>
+            <li>Preços, moeda, período de cobrança, benefícios e eventuais testes gratuitos são exibidos antes da confirmação da compra.</li>
+            <li>Assinaturas renovam automaticamente ao final de cada período, salvo cancelamento nas configurações da Google Play antes da renovação.</li>
+            <li>Excluir o aplicativo não cancela uma assinatura. O gerenciamento e o cancelamento devem ser feitos na conta da loja.</li>
+            <li>Reembolsos e cobranças são administrados pela loja, sem prejuízo dos direitos garantidos pela legislação aplicável.</li>
+            <li>Alterações de preço serão informadas com antecedência e por razões válidas, como evolução do serviço, custos operacionais, tributos ou mudanças econômicas, observadas as regras da loja.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>6. Beta Founders e benefícios promocionais</h2>
+          <p>Benefícios Beta Founder são pessoais, vinculados à conta selecionada, não transferíveis e sem valor em dinheiro. A duração concedida será a registrada para a conta. O benefício não impede suspensão por fraude ou violação destes Termos e depende da continuidade operacional do serviço.</p>
+        </section>
+
+        <section>
+          <h2>7. Uso aceitável</h2>
+          <ul>
+            <li>Não tente acessar contas, dados ou sistemas sem autorização.</li>
+            <li>Não contorne limites, controles de segurança ou regras de assinatura.</li>
+            <li>Não use automações abusivas, engenharia reversa ilícita, malware ou qualquer mecanismo que prejudique o serviço ou outros usuários.</li>
+            <li>Não use o aplicativo para atividades ilegais ou violação de direitos.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>8. Propriedade intelectual</h2>
+          <p>O aplicativo, marca, interfaces, textos próprios, elementos visuais e software pertencem ao Intualia ou aos respectivos licenciantes. Estes Termos concedem apenas uma licença pessoal, limitada, revogável e não transferível de uso do app.</p>
+        </section>
+
+        <section>
+          <h2>9. Disponibilidade e alterações</h2>
+          <p>Podemos corrigir, atualizar, substituir ou descontinuar recursos para segurança, cumprimento legal ou evolução do produto. Buscaremos avisar sobre mudanças relevantes que afetem benefícios pagos. Não garantimos disponibilidade ininterrupta.</p>
+        </section>
+
+        <section>
+          <h2>10. Responsabilidade</h2>
+          <p>Na extensão permitida pela lei, o serviço é fornecido conforme disponível e não garante resultados pessoais, emocionais, financeiros ou de saúde. Nada nestes Termos exclui direitos obrigatórios do consumidor ou responsabilidades que não possam ser legalmente limitadas.</p>
+        </section>
+
+        <section>
+          <h2>11. Encerramento e exclusão</h2>
+          <p>Você pode parar de usar o app e solicitar a exclusão da conta e dos dados associados. Obrigações que, por sua natureza, devam permanecer após o encerramento continuarão válidas, inclusive proteção de propriedade intelectual e cumprimento legal.</p>
+        </section>
+
+        <section>
+          <h2>12. Lei aplicável, alterações e contato</h2>
+          <p>Aplicam-se as leis da República Federativa do Brasil, preservados o Código de Defesa do Consumidor e as regras obrigatórias do seu local de residência. Podemos atualizar estes Termos e indicaremos a data da versão vigente. Para dúvidas, escreva para <strong>privacidade@intualia.app</strong>.</p>
+        </section>
+      </article>
+
+      <a class="back-link" href="/">&larr; Voltar para a página inicial</a>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© 2026 Intualia</span>
+      <nav>
+        <a href="/">Início</a>
+        <a href="/privacidade.html">Privacidade</a>
+        <a href="/termos.html">Termos de Uso</a>
+        <a href="/excluir-conta.html">Excluir conta</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
